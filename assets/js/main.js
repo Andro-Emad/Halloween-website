@@ -83,16 +83,17 @@ const sr = ScrollReveal().reveal({
 ScrollReveal().reveal(
   `.home__data, .footer__content, .footer__logo, .footer__description`
 );
-ScrollReveal().reveal(`.home__terr-1`, { origin: "left", delay: 800 });
-ScrollReveal().reveal(`.home__terr-2`, { origin: "right", delay: 800 });
-ScrollReveal().reveal(`.home__img`, { delay: 800 });
-ScrollReveal().reveal(`.category__card, .items__card`, { interval: 100 });
-ScrollReveal().reveal(`.about__img, .about__data , .footer__tree-2`, {
+ScrollReveal(sr).reveal(`.home__terr-1`, { origin: "left", delay: 800 });
+ScrollReveal(sr).reveal(`.home__img`, { delay: 800 });
+ScrollReveal(sr).reveal(`.home__terr-2`, { origin: "right", delay: 800 });
+ScrollReveal(sr).reveal(`.category__card, .items__card`, { interval: 100 });
+ScrollReveal(sr).reveal(`.about__img, .about__data , .footer__tree-2`, {
   origin: "left",
 });
-ScrollReveal().reveal(`.party__images, .party__data, .footer__tree-1`, {
+ScrollReveal(sr).reveal(`.party__images, .party__data, .footer__tree-1`, {
   origin: "right",
 });
 /*==============================*/
 console.log("Happy Halloween");
 console.log("Made By Andro-Emad");
+console.log("27/10/2022");
