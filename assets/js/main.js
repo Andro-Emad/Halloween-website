@@ -125,6 +125,11 @@ ScrollReveal(sr).reveal(`.party__images, .party__data, .footer__tree-1`, {
   origin: "right",
 });
 /*==============================*/
+// what year
+const spanYear = document.querySelector(".footer__copy span:last-child ");
+let dateNow = new Date();
+spanYear.innerHTML = `${dateNow.getFullYear()}`;
+/*==============================*/
 console.log("Happy Halloween");
 console.log("Made By Andro-Emad");
 console.log("27/10/2022");
