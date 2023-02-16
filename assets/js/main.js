@@ -72,6 +72,37 @@ const scrollUp = () => {
 };
 window.addEventListener("scroll", scrollUp);
 /*=============== SCROLL REVEAL ANIMATION ===============*/
+// let Home = document.getElementById("#home");
+// let homeImg = document.querySelector(".home__img");
+// let homeTree1 = document.querySelector(".home__tree-1");
+// let homeTree2 = document.querySelector(".home__tree-1");
+
+// window.onscroll = function () {
+//   if (window.scrollY >= Home.offsetTop + 100) {
+//     homeImg.classList.add("fadeInLeft");
+//     homeTree1.classList.add("fadeInLeft");
+//     homeTree2.classList.add("fadeInRight");
+//   } else {
+//     homeImg.classList.remove("fadeInLeft");
+//     homeTree1.classList.remove("fadeInLeft");
+//     homeTree2.classList.remove("fadeInRight");
+//   }
+// };
+
+// let footer = document.querySelector(".footer");
+// let footerTree1 = document.querySelector(".footer__tree-1");
+// let footerTree2 = document.querySelector(".footer__tree-1");
+
+// window.onscroll = function () {
+//   if (window.scrollY >= footer.offsetTop - 100) {
+//     footerTree1.classList.add("fadeInLeft");
+//     footerTree2.classList.add("fadeInRight");
+//   } else {
+//     footerTree1.classList.remove("fadeInLeft");
+//     footerTree2.classList.remove("fadeInRight");
+//   }
+// };
+
 const sr = ScrollReveal().reveal({
   origin: "top",
   distance: "60px",

@@ -4,7 +4,6 @@
 /*=============== VARIABLES CSS ===============*/
 :root {
   --header-height: 3.5rem;
-
   /*========== Colors ==========*/
   /*Color mode HSL(hue, saturation, lightness)*/
   --first-color: hsl(22, 72%, 50%);
@@ -14,12 +13,10 @@
   --text-color-light: hsl(22, 4%, 55%);
   --body-color: hsl(22, 8%, 6%);
   --container-color: hsl(22, 8%, 7%);
-
   /*========== Font and typography ==========*/
   /*.5rem = 8px | 1rem = 16px ...*/
   --body-font: "Poppins", sans-serif;
   --second-font: "Butcherman", cursive;
-
   --biggest-font-size: 2rem;
   --h1-font-size: 1.5rem;
   --h2-font-size: 1.25rem;
@@ -27,12 +24,11 @@
   --normal-font-size: 0.938rem;
   --small-font-size: 0.813rem;
   --smaller-font-size: 0.75rem;
-
+  --transition: 0.6s;
   /*========== Font weight ==========*/
   --font-medium: 500;
   --font-semi-bold: 600;
   --font-bold: 700;
-
   /*========== z index ==========*/
   --z-tooltip: 10;
   --z-fixed: 100;
@@ -50,7 +46,6 @@
     --smaller-font-size: 0.813rem;
   }
 }
-
 /*=============== BASE ===============*/
 * {
   box-sizing: border-box;
@@ -81,7 +76,6 @@ img {
   max-width: 100%;
   height: auto;
 }
-
 /*=============== REUSABLE CSS CLASSES ===============*/
 .container {
   max-width: 1024px;
@@ -365,7 +359,7 @@ img {
   border-radius: 2rem;
   padding: 4.5rem 2.25rem 2rem;
   text-align: center;
-  transition: background 0.3s;
+  transition: var(--transition);
 }
 .category__img {
   width: 120px;
@@ -373,7 +367,7 @@ img {
   inset: 0;
   margin: 0 auto;
   top: -3.5rem;
-  transition: transform 0.3s;
+  transition: var(--transition);
 }
 .category__title {
   font-size: var(--h3-font-size);
@@ -385,14 +379,10 @@ img {
   font-size: var(--small-font-size);
 }
 .category__card:hover {
-  width: 40px;
-  position: absolute;
-  top: 3rem;
-  right: 3.5rem;
-  transform: rotate(15deg);
+  transform: translateY(-0.9rem);
 }
 .category__card:hover .category__img {
-  transform: translateY(-0.5rem);
+  transform: translateY(-0.6rem);
 }
 .category .shape__small {
   top: 25rem;
@@ -417,6 +407,11 @@ img {
 .about__img {
   width: 300px;
   justify-self: center;
+  transition: var(--transition);
+  /* transform: scale(0); */
+}
+.about__img:hover {
+  transform: translateY(-0.9rem);
 }
 .about .shape__small {
   top: 2rem;
@@ -437,20 +432,22 @@ img {
   gap: 4rem 1.5rem;
 }
 .items__card {
-  /* position: absolute; */
   background-color: var(--container-color);
   border-radius: 1.5rem;
   padding: 4rem 1.25rem 1.25rem;
   box-shadow: 0 4px 16px hsl(22, 10%, 2%, 0.3);
   text-align: center;
+  transition: var(--transition);
+}
+.items__card:hover {
+  transform: translateY(-0.9rem);
 }
 .items__img {
   width: 100px;
-  /* position: absolute; */
   inset: 0;
   top: -2rem;
   margin: 0 auto;
-  transition: transform 0.3s;
+  transition: var(--transition);
 }
 .items__name {
   font-size: var(--normal-font-size);
@@ -926,5 +923,36 @@ img {
   .footer__tree-1,
   .footer__tree-2 {
     width: 300px;
+  }
+}
+/**/
+.fadeInLeft {
+  animation: fadeInLeft 4s 1;
+  animation-fill-mode: forwards;
+}
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-150%);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}
+.fadeInRight {
+  animation: fadeInRight 4s 1;
+  animation-fill-mode: forwards;
+}
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(150%);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0%);
   }
 }
